@@ -11,7 +11,7 @@ class SpotifyConnectionToggle {
         return "Allows you to toggle between showing and not showing your current spotify track in your profile status";
     }
     getVersion() {
-        return "0.0.1";
+        return "0.0.2";
     }
     getAuthor() {
         return "Alve"; // Current Discord account: @Alve#0001
