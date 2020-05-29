@@ -1,4 +1,4 @@
-//META{"name":"SpotifyConnectionToggle","displayName":"SpotifyConnectionToggle","authorId":"265918045069770753"}*//
+//META{"name":"SpotifyConnectionToggle","displayName":"SpotifyConnectionToggle","authorId":"265918045069770753", "source":"https://raw.githubusercontent.com/alvesvaren/betterdiscord-things/master/plugins/spotify_toggle.plugin.js","website":"https://github.com/alvesvaren/betterdiscord-things"}*//
 
 class SpotifyConnectionToggle {
     getName() {
