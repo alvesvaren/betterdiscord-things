@@ -11,7 +11,7 @@ class SpotifyConnectionToggle {
         return "Allows you to toggle between showing and not showing your current spotify track in your profile status";
     }
     getVersion() {
-        return "0.0.2";
+        return "0.1";
     }
     getAuthor() {
         return "Alve"; // Current Discord account: @Alve#0001
@@ -24,9 +24,12 @@ class SpotifyConnectionToggle {
         this.toggleSwitch = null;
         this.shouldStop = false;
         this.injectedStyle = null;
+        this.spacer = document.createElement("div");
+        this.spacer.style.height = "32px";
     }
 
     start() {
+        this.section.appendChild(this.spacer);
         this.getConnectionData.bind(this)(this.appendSwitch);
     }
 
@@ -37,9 +40,8 @@ class SpotifyConnectionToggle {
             padding-left: 8px; 
             padding-right: 8px; 
             height: 32px; 
-            padding-top: 8px;
         }`;
-
+        this.spacer.remove();
         if (!this.shouldStop) {
             document.head.appendChild(this.injectedStyle);
             this.section.appendChild(this.toggleSwitch.getElement());
@@ -78,9 +80,10 @@ class SpotifyConnectionToggle {
 
     stop() {
         this.shouldStop = true;
+        this.spacer.remove();
+        this.injectedStyle.remove();
         if (this.toggleSwitch) {
             this.toggleSwitch.getElement().remove();
-            this.injectedStyle.remove();
         }
     }
 }
