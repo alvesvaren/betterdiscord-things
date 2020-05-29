@@ -73,9 +73,6 @@ class SpotifyConnectionToggle {
             shouldShow,
             this.handleToggle
         );
-
-        this.toggleSwitch.getElement().style =
-            "background-color: var(--background-tertiary); flex-shrink: 0;";
         whenDone.bind(this)();
     }
 

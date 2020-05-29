@@ -890,13 +890,6 @@
     background: var(--background-tertiary) !important;
 }
 
-.container-3baos1,
-.container-3baos1 .avatar-SmRMf2 {
-    background-color: var(--background-tertiary);
-    -ms-flex-negative: 0;
-    flex-shrink: 0;
-}
-
 .message-2qnXI6.selected-2P5D_Z,
 .mouse-mode .message-2qnXI6:hover {
     background-color: transparent;
