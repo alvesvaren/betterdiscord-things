@@ -11,7 +11,7 @@ class SpotifyConnectionToggle {
         return "Allows you to toggle between showing and not showing your current spotify track in your profile status";
     }
     getVersion() {
-        return "0.1.1";
+        return "0.1.2";
     }
     getAuthor() {
         return "Alve"; // Current Discord account: @Alve#0001
@@ -67,8 +67,11 @@ class SpotifyConnectionToggle {
         const spotifyConnection = connectionsResponse.body.find(
             (e) => e.type === "spotify"
         );
+        if (!spotifyConnection) {
+            BdApi.showToast("Spotify Connection Toggle: Can't connect to spotify, add the connection and reload discord", {type: "error", timeout: 7000})
+            return;
+        }
         const shouldShow = spotifyConnection.show_activity;
-
         this.username = spotifyConnection.id;
         this.toggleSwitch = new ZLibrary.Settings.Switch(
             "Show spotify as status",
