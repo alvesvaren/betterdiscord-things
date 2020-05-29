@@ -20,6 +20,7 @@ class SpotifyConnectionToggle {
     constructor() {
         this.selector = ".da-sidebar > section.da-panels";
         this.section = document.querySelector(this.selector);
+        this.handleToggle = this.handleToggle.bind(this);
         this.start = this.start.bind(this);
         this.toggleSwitch = null;
         this.shouldStop = false;
@@ -54,7 +55,7 @@ class SpotifyConnectionToggle {
 
     async handleToggle(toggled) {
         await ZLibrary.DiscordModules.APIModule.patch({
-            url: "/users/@me/connections/spotify/evla2003",
+            url: "/users/@me/connections/spotify/" + this.username,
             body: { show_activity: toggled },
         });
     }
@@ -67,8 +68,8 @@ class SpotifyConnectionToggle {
             (e) => e.type === "spotify"
         );
         const shouldShow = spotifyConnection.show_activity;
-        this.username = spotifyConnection.id;
 
+        this.username = spotifyConnection.id;
         this.toggleSwitch = new ZLibrary.Settings.Switch(
             "Show spotify as status",
             null,
