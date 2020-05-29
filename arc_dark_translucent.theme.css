@@ -22,6 +22,9 @@
     --bd-blue: #7289da !important;
     --bd-blue-hover: #677bc4 !important;
     --bd-blue-active: #5b6eae !important;
+    --glasscord-win-blur: blurbehind;
+    --glasscord-macos-vibrancy: fullscreen-ui;
+    --glasscord-linux-blur: true;
 }
 
 .theme-dark .container-1D34oG {
