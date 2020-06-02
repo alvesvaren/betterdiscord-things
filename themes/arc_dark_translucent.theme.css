@@ -889,10 +889,6 @@
     position: absolute;
 }
 
-.toast {
-    background: var(--background-tertiary) !important;
-}
-
 .message-2qnXI6.selected-2P5D_Z,
 .mouse-mode .message-2qnXI6:hover {
     background-color: transparent;
