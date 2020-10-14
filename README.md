@@ -7,7 +7,9 @@ Currently contains:
 
 ## Spotify toggle
 
-A simple plugin which allows you to toggle between showing and not showing the current spotify track as your status on discord from the main screen.
+A simple plugin which allows you to toggle between showing and not showing the current spotify track as your status on discord from the main screen. 
+
+Needs the [0PluginLibrary.plugin.js](https://raw.githubusercontent.com/rauenzi/BDPluginLibrary/master/release/0PluginLibrary.plugin.js) file in order to work, just add it to the plugins folder aswell.
 
 ![GIF showcase of plugin](https://i.imgur.com/FgpZ9sE.gif)
 
