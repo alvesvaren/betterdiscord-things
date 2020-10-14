@@ -36,7 +36,7 @@ class SpotifyConnectionToggle {
 
     appendSwitch() {
         this.injectedStyle = document.createElement("style");
-        this.injectedStyle.innerHTML = `${this.selector} > .plugin-input-container > .da-flex {
+        this.injectedStyle.innerHTML = `${this.selector} > .plugin-input-container > .da-container {
             margin-bottom: 0px; 
             padding-left: 8px; 
             padding-right: 8px; 
